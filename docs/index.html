@@ -1,22 +1,27 @@
-!
 <!DOCTYPE html>
 <html lang="ko">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CU 모작</title>
+
     <!-- 테일윈드 불러오기 -->
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- 폰트어썸 불러오기 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
 
     <!-- 제이쿼리 불러오기 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <!-- 스와이퍼 불러오기 -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
@@ -24,994 +29,1085 @@
     <script defer src="script/script.js"></script>
 
     <!-- 공통 css 연결 -->
-    <link rel="stylesheet" href="style/style.css" />
-</head>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<body>
-<!--로그인바 구현-->
-<div class="con mx-auto">
-	<div class="login-bar h-[36px] flex items-center justify-end">
-		<ul class="flex justify-end">
-			<li><a href="#">로그인</a></li>
-			<li><a href="#">점주광장</a></li>
-		</ul>
-	</div>
-	<!--탑바 구현-->
-	<div class="top-bar h-[104px] flex justify-around items-center">
-		<div class="logo-box z-10">
-			<a href="#"><img src="img/logo.png" alt="cu 로고 이미지" /></a>
-		</div>
-		<div class="top-bar__menu-box">
-			<ul class="flex">
-				<li>
-					<a href="#">CU 소개</a>
-					<ul class="top-bar__menu-box-2">
-						<li><a href="#">브랜드 스토리</a></li>
-						<li><a href="#">BGF LIVE</a></li>
-						<li><a href="#">CU 갤러리</a></li>
-					</ul>
-				</li>
-				<li>
-					<a href="#">상품·서비스</a>
-					<ul class="top-bar__menu-box-2">
-						<li><a href="#">전체 상품</a></li>
-						<li><a href="#">CU 차별화 상품</a></li>
-						<li><a href="#">행사상품</a></li>
-						<li><a href="#">생활편의서비스</a></li>
-						<li><a href="#">제휴카드</a></li>
-					</ul>
-				</li>
-				<li><a href="#">매장안내</a></li>
-				<li>
-					<a href="#">멤버십</a>
-					<ul class="top-bar__menu-box-2">
-						<li><a href="#">멤버십 소개</a></li>
-						<li><a href="#">포켓 CU</a></li>
-					</ul>
-				</li>
-				<li><a href="#">창업·상생</a></li>
-				<li>
-					<a href="#">입점상담</a>
-					<ul class="top-bar__menu-box-2">
-						<li><a href="#">입점 프로세스</a></li>
-						<li><a href="#">기준 안내</a></li>
-						<li><a href="#">입점 상담 신청</a></li>
-						<li><a href="#">동반 성장</a></li>
-					</ul>
-				</li>
-				<li><a href="#">새로운 소식</a></li>
-			</ul>
-		</div>
-		<nav class="flex">
-			<div class="menu-lang inline-flex relative">
-				<a href="#">KR</a>
-				<ul class="menu-lang__menu-box">
-					<li><a class="!text-white" href="#">KR</a></li>
-					<li><a href="#">EN</a></li>
-					<li><a href="#">CN</a></li>
-				</ul>
-			</div>
-			<div class="menu-btn cursor-pointer z-10">
-				<img src="img/btn_menu_ico.png" alt="메뉴버튼" />
-			</div>
-		</nav>
-	</div>
-	<!--모바일탑바 구현-->
-	<div class="mobile-top-bar">
-		<div class="top-wrap">
-			<div class="logo-box">
-				<img src="img/logo.png" alt="cu로고" class="logo" />
-			</div>
-			<div class="menu-btn cursor-pointer z-10 mr-[20px] mt-[-7px]">
-				<img src="img/btn_menu_ico.png" alt="메뉴버튼" />
-			</div>
-		</div>
-		<div class="bottom-wrap">
-			<div class="menu-box">
-				<ul class="flex">
-					<li><a href="#">CU소개</a></li>
-					<li><a href="#">상품·서비스</a></li>
-					<li><a href="#">매장안내</a></li>
-					<li><a href="#">멤버십</a></li>
-					<li><a href="#">창업·상생</a></li>
-					<li><a href="#">새로운소식</a></li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-<!--사이드바  시작-->
-<div class="pc-side-bar side-bar">
-	<div class="menu-util-box">
-		<div class="clear-btn cursor-pointer">
-			<div class="clear-btn_img">
-				<img src="img/layer_close.png" alt="닫기버튼" />
-			</div>
-		</div>
-		<!-- 컨텐츠-->
-		<nav class="side-bar__content-wrap flex">
-			<div class="content-box-1 w-[975px]">
-				<ul class="flex-grid">
-					<li class="flex flex-col">
-						<a href="#">CU 소개</a>
-						<a href="#">브랜드 스토리</a>
-						<a href="#">BGF LIVE</a>
-						<a href="#">CU 갤러리</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#">상품·서비스</a>
-						<a href="#">전체상품</a>
-						<a href="#">CU 차별화 상품</a>
-						<a href="#">행사상품</a><a href="#">생활편의서비스</a>
-						<a href="#">제휴카드</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#">매장안내</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#">멤버십</a>
-						<a href="#">멤버십 소개</a>
-						<a href="#">포켓 CU</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#">창업·상생</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#">입점상담</a>
-						<a href="#">입점프로세스</a>
-						<a href="#">기준안내</a>
-						<a href="#">입점상담신청</a><a href="#">동반성장</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#">새로운소식</a>
-					</li>
-					<li class="flex flex-col">
-						<a href="#"></a>
-					</li>
-				</ul>
-			</div>
-			<div class="content-box-2 w-[220px]">
-				<div class="login-box-1 pb-[30px]">
-					<a class="login-btn" href="#">로그인</a>
-				</div>
-				<div class="site-link-box flex justify-center">
-					<ul class="site-link-btn">
-						<li><a href="#">점주광장</a></li>
-					</ul>
-				</div>
-				<div class="customer-center-box"></div>
-			</div>
-		</nav>
-	</div>
-</div>
-<!--사이드바 끝-->
-<!--모바일 사이드바 시작-->
-<div class="mobile-side-bar">
-	<div class="menu-util-box">
-		<div class="clear-btn">
-			<div class="clear-btn_img">
-				<img src="img/layer_close.png" alt="닫기버튼" />
-			</div>
-		</div>
-		<section class="content-wrap-1 mx-auto">
-			<ul>
-				<li><a href="#">CU소개</a></li>
-				<li><a href="#">상품·서비스</a></li>
-				<li><a href="#">매장안내</a></li>
-				<li><a href="#">멤버십</a></li>
-				<li><a href="#">창업·상생</a></li>
-				<li><a href="#">새로운 소식</a></li>
-			</ul>
-			<section class="site-link-1"><a href="#">점주광장</a></section>
-		</section>
-		<section class="site-link-2">
-			<a href="#"><img src="img/side-banner-1.png" alt="매장안내" /></a>
-		</section>
-		<section class="site-link-3">
-			<a href="#"><img src="img/side-banner-2.png" alt="고객센터" />
-				<p>1577-8007<br />평일 09:00~ 21:00</p>
-			</a>
-		</section>
-	</div>
-</div>
-<!--모바일 사이드바 끝-->
-<main>
-	<div class="mx-auto">
-		<section class="
-            main-banner-box
-            flex
-            h-[321px]
-            justify-center
-            items-center
-            justify-around
-            content-between
-          ">
-			<div class="main-banner-img-1">
-				<img src="img/main_visual_logo_text_pc.png" alt="hello, friends" />
-			</div>
-			<div class="main-banner-img-2">
-				<img src="img/hello-friends-img.png" alt="hello, friends" />
-			</div>
-			<div class="cu-story-box">
-				<a href="#">CU 스토리보기</a><span class="cu-story-btn"></span>
-			</div>
-		</section>
-		<!--이벤트 배너 스와이퍼-->
-		<section class="event-banner-swiper h-full">
-			<div class="swiper">
-				<!-- Additional required wrapper -->
-				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide swiper-slide-1">
-						<img src="img/event-img-1.jpg" alt="cu 창업 추천 소개비" />
-					</div>
-					<div class="swiper-slide swiper-slide-2">
-						<img src="img/event-img-2.jpg" alt="2024 cu 추석 선물세트" />
-					</div>
-					<div class="swiper-slide swiper-slide-3">
-						<img src="img/event-img-3.jpg" alt="8월 행사 모아보기" />
-					</div>
-					<div class="swiper-slide swiper-slide-4">
-						<img src="img/event-img-4.jpg" alt="함께해요 대한민국 더욱 뜨거워진 슈퍼세일" />
-					</div>
-					<div class="swiper-slide swiper-slide-5">
-						<img src="img/event-img-5.jpg" alt="cu머니 같이쓰고 5만원 모임비 받자" />
-					</div>
-				</div>
-			</div>
-			<!-- If we need pagination -->
-			<div class="swiper-pagination-box h-[48px]">
-				<div class="swiper-pagination"></div>
-			</div>
-			<!-- If we need navigation buttons -->
-			<div class="swiper-button-group">
-				<div class="swiper-button swiper-button__prev"></div>
-				<div class="swiper-button swiper-button__next"></div>
-			</div>
-		</section>
-		<!-- 핫이슈 배너 박스-->
-		<section class="hot-issue-box relative h-full mt-[84px]">
-			<div class="hot-issue__title-box">
-				<h2 class="hot-issue__title">핫이슈</h2>
-				<div class="hot-issue__link-more">
-					<a href="#">
-						<span class="pc-link-text">핫이슈 상품 모두보기</span>
-						<span class="pc-icon-arrow"></span>
-						<span class="mobile-link-text">모두보기</span>
-					</a>
-				</div>
-			</div>
-			<!-- 핫이슈배너 스와이프-->
-			<div class="hot-issue-banner-swiper">
-				<div class="con w-max-[1280px] mx-auto">
-					<div class="swiper">
-						<!-- Additional required wrapper -->
-						<ul class="swiper-wrapper">
-							<!-- Slides -->
-							<li class="swiper-slide swiper-slide-1">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-1.jpg" alt="밤양갱버터쿠키" />
-									</div>
-									<div class="text-box">
-										<div class="name">
-											<p>405)밤양갱버터쿠키</p>
-										</div>
-										<div class="price">
-											<strong>2,600</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-2">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-2.jpg" alt="제육정식" />
-									</div>
-									<div class="text-box">
-										<p>도)오천원의행복제육정식</p>
-										<div class="name"></div>
-										<div class="price">
-											<strong>5,000</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-3">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-3.jpg" alt="통인시장 기름떡볶이" />
-									</div>
-									<div class="text-box">
-										<div class="name">
-											<p>통인시장)매콤기름떡볶이</p>
-										</div>
-										<div class="price">
-											<strong>3,600</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-4">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-4.jpg" alt="쇼콜라 생크림 케이크" />
-									</div>
-									<div class="text-box">
-										<div class="name">
-											<p>피오레)쇼콜라생크림케이크</p>
-										</div>
-										<div class="price">
-											<strong>3,300</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-5">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-5.jpg" alt="CJ)햇반밥알크림빵" />
-									</div>
-									<div class="text-box">
-										<div class="name">CJ)햇반밥알크림빵</div>
-										<div class="price">
-											<strong>3,400</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-6">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-6.jpg" alt="농심)푸팟퐁구리큰사발면" />
-									</div>
-									<div class="text-box">
-										<p>농심)푸팟퐁구리큰사발면</p>
-										<div class="name"></div>
-										<div class="price">
-											<strong>2,000</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-7">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-7.jpg" alt="햄)통인시장추억의버거" />
-									</div>
-									<div class="text-box">
-										<div class="name">
-											<p>햄)통인시장추억의버거</p>
-										</div>
-										<div class="price">
-											<strong>3,400</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-8">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-8.jpg" alt="더본)백종원김치찌개라면" />
-									</div>
-									<div class="text-box">
-										<div class="name">
-											<p>더본)백종원김치찌개라면</p>
-										</div>
-										<div class="price">
-											<strong>2,200</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-							<li class="swiper-slide swiper-slide-9">
-								<a href="#" class="box-wrap">
-									<div class="img-box">
-										<img src="img/hot-issue-9.jpg" alt="더본)백종원김치찌개라면" />
-									</div>
-									<div class="text-box">
-										<div class="name">
-											<p>튀김)단팥붕어빵N</p>
-										</div>
-										<div class="price">
-											<strong>900</strong><span>원</span>
-										</div>
-									</div>
-								</a>
-							</li>
-						</ul>
-					</div>
-					<div class="swiper-util-box h-[50px] relative">
-						<div class="swiper-pagination"></div>
-					</div>
-					<div class="swiper-button swiper-button-prev"></div>
-					<div class="swiper-button swiper-button-next"></div>
-				</div>
-			</div>
-		</section>
+  <body>
+    <!--로그인바 구현-->
+    <div class="con mx-auto">
+      <div class="login-bar h-[36px] flex items-center justify-end">
+        <ul class="flex justify-end">
+          <li><a href="#">로그인</a></li>
+          <li><a href="#">점주광장</a></li>
+        </ul>
+      </div>
+      <!--탑바 구현-->
+      <div class="top-bar h-[104px] flex justify-around items-center">
+        <div class="logo-box z-10">
+          <a href="#"><img src="img/logo.png" alt="cu 로고 이미지" /></a>
+        </div>
+        <div class="top-bar__menu-box">
+          <ul class="flex">
+            <li>
+              <a href="#">CU 소개</a>
+              <ul class="top-bar__menu-box-2">
+                <li><a href="#">브랜드 스토리</a></li>
+                <li><a href="#">BGF LIVE</a></li>
+                <li><a href="#">CU 갤러리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">상품·서비스</a>
+              <ul class="top-bar__menu-box-2">
+                <li><a href="#">전체 상품</a></li>
+                <li><a href="#">CU 차별화 상품</a></li>
+                <li><a href="#">행사상품</a></li>
+                <li><a href="#">생활편의서비스</a></li>
+                <li><a href="#">제휴카드</a></li>
+              </ul>
+            </li>
+            <li><a href="#">매장안내</a></li>
+            <li>
+              <a href="#">멤버십</a>
+              <ul class="top-bar__menu-box-2">
+                <li><a href="#">멤버십 소개</a></li>
+                <li><a href="#">포켓 CU</a></li>
+              </ul>
+            </li>
+            <li><a href="#">창업·상생</a></li>
+            <li>
+              <a href="#">입점상담</a>
+              <ul class="top-bar__menu-box-2">
+                <li><a href="#">입점 프로세스</a></li>
+                <li><a href="#">기준 안내</a></li>
+                <li><a href="#">입점 상담 신청</a></li>
+                <li><a href="#">동반 성장</a></li>
+              </ul>
+            </li>
+            <li><a href="#">새로운 소식</a></li>
+          </ul>
+        </div>
+        <nav class="flex">
+          <div class="menu-lang inline-flex relative">
+            <a href="#">KR</a>
+            <ul class="menu-lang__menu-box">
+              <li><a class="!text-white" href="#">KR</a></li>
+              <li><a href="#">EN</a></li>
+              <li><a href="#">CN</a></li>
+            </ul>
+          </div>
+          <div class="menu-btn cursor-pointer z-10">
+            <img src="img/btn_menu_ico.png" alt="메뉴버튼" />
+          </div>
+        </nav>
+      </div>
+      <!--모바일탑바 구현-->
+      <div class="mobile-top-bar">
+        <div class="top-wrap">
+          <div class="logo-box">
+            <img src="img/logo.png" alt="cu로고" class="logo" />
+          </div>
+          <div class="menu-btn cursor-pointer z-10 mr-[20px] mt-[-7px]">
+            <img src="img/btn_menu_ico.png" alt="메뉴버튼" />
+          </div>
+        </div>
+        <div class="bottom-wrap">
+          <div class="menu-box">
+            <ul class="flex">
+              <li><a href="#">CU소개</a></li>
+              <li><a href="#">상품·서비스</a></li>
+              <li><a href="#">매장안내</a></li>
+              <li><a href="#">멤버십</a></li>
+              <li><a href="#">창업·상생</a></li>
+              <li><a href="#">새로운소식</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--사이드바  시작-->
+    <div class="pc-side-bar side-bar">
+      <div class="menu-util-box">
+        <div class="clear-btn cursor-pointer">
+          <div class="clear-btn_img">
+            <img src="img/layer_close.png" alt="닫기버튼" />
+          </div>
+        </div>
+        <!-- 컨텐츠-->
+        <nav class="side-bar__content-wrap flex">
+          <div class="content-box-1 w-[975px]">
+            <ul class="flex-grid">
+              <li class="flex flex-col">
+                <a href="#">CU 소개</a>
+                <a href="#">브랜드 스토리</a>
+                <a href="#">BGF LIVE</a>
+                <a href="#">CU 갤러리</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#">상품·서비스</a>
+                <a href="#">전체상품</a>
+                <a href="#">CU 차별화 상품</a>
+                <a href="#">행사상품</a><a href="#">생활편의서비스</a>
+                <a href="#">제휴카드</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#">매장안내</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#">멤버십</a>
+                <a href="#">멤버십 소개</a>
+                <a href="#">포켓 CU</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#">창업·상생</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#">입점상담</a>
+                <a href="#">입점프로세스</a>
+                <a href="#">기준안내</a>
+                <a href="#">입점상담신청</a><a href="#">동반성장</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#">새로운소식</a>
+              </li>
+              <li class="flex flex-col">
+                <a href="#"></a>
+              </li>
+            </ul>
+          </div>
+          <div class="content-box-2 w-[220px]">
+            <div class="login-box-1 pb-[30px]">
+              <a class="login-btn" href="#">로그인</a>
+            </div>
+            <div class="site-link-box flex justify-center">
+              <ul class="site-link-btn">
+                <li><a href="#">점주광장</a></li>
+              </ul>
+            </div>
+            <div class="customer-center-box"></div>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <!--사이드바 끝-->
+    <!--모바일 사이드바 시작-->
+    <div class="mobile-side-bar">
+      <div class="menu-util-box">
+        <div class="clear-btn">
+          <div class="clear-btn_img">
+            <img src="img/layer_close.png" alt="닫기버튼" />
+          </div>
+        </div>
+        <section class="content-wrap-1 mx-auto">
+          <ul>
+            <li><a href="#">CU소개</a></li>
+            <li><a href="#">상품·서비스</a></li>
+            <li><a href="#">매장안내</a></li>
+            <li><a href="#">멤버십</a></li>
+            <li><a href="#">창업·상생</a></li>
+            <li><a href="#">새로운 소식</a></li>
+          </ul>
+          <section class="site-link-1"><a href="#">점주광장</a></section>
+        </section>
+        <section class="site-link-2">
+          <a href="#"><img src="img/side-banner-1.png" alt="매장안내" /></a>
+        </section>
+        <section class="site-link-3">
+          <a href="#"
+            ><img src="img/side-banner-2.png" alt="고객센터" />
+            <p>1577-8007<br />평일 09:00~ 21:00</p>
+          </a>
+        </section>
+      </div>
+    </div>
+    <!--모바일 사이드바 끝-->
+    <main>
+      <div class="mx-auto">
+        <section
+          class="main-banner-box flex h-[321px] justify-center items-center justify-around content-between"
+        >
+          <div class="main-banner-img-1">
+            <img src="img/main_visual_logo_text_pc.png" alt="hello, friends" />
+          </div>
+          <div class="main-banner-img-2">
+            <img src="img/hello-friends-img.png" alt="hello, friends" />
+          </div>
+          <div class="cu-story-box">
+            <a href="#">CU 스토리보기</a><span class="cu-story-btn"></span>
+          </div>
+        </section>
+        <!--이벤트 배너 스와이퍼-->
+        <section class="event-banner-swiper h-full">
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide swiper-slide-1">
+                <img src="img/event-img-1.jpg" alt="cu 창업 추천 소개비" />
+              </div>
+              <div class="swiper-slide swiper-slide-2">
+                <img src="img/event-img-2.jpg" alt="2024 cu 추석 선물세트" />
+              </div>
+              <div class="swiper-slide swiper-slide-3">
+                <img src="img/event-img-3.jpg" alt="8월 행사 모아보기" />
+              </div>
+              <div class="swiper-slide swiper-slide-4">
+                <img
+                  src="img/event-img-4.jpg"
+                  alt="함께해요 대한민국 더욱 뜨거워진 슈퍼세일"
+                />
+              </div>
+              <div class="swiper-slide swiper-slide-5">
+                <img
+                  src="img/event-img-5.jpg"
+                  alt="cu머니 같이쓰고 5만원 모임비 받자"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination-box h-[48px]">
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-group">
+            <div class="swiper-button swiper-button__prev"></div>
+            <div class="swiper-button swiper-button__next"></div>
+          </div>
+        </section>
+        <!-- 핫이슈 배너 박스-->
+        <section class="hot-issue-box relative h-full mt-[84px]">
+          <div class="hot-issue__title-box">
+            <h2 class="hot-issue__title">핫이슈</h2>
+            <div class="hot-issue__link-more">
+              <a href="#">
+                <span class="pc-link-text">핫이슈 상품 모두보기</span>
+                <span class="pc-icon-arrow"></span>
+                <span class="mobile-link-text">모두보기</span>
+              </a>
+            </div>
+          </div>
+          <!-- 핫이슈배너 스와이프-->
+          <div class="hot-issue-banner-swiper">
+            <div class="con w-max-[1280px] mx-auto">
+              <div class="swiper">
+                <!-- Additional required wrapper -->
+                <ul class="swiper-wrapper">
+                  <!-- Slides -->
+                  <li class="swiper-slide swiper-slide-1">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img src="img/hot-issue-1.jpg" alt="밤양갱버터쿠키" />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">
+                          <p>405)밤양갱버터쿠키</p>
+                        </div>
+                        <div class="price">
+                          <strong>2,600</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-2">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img src="img/hot-issue-2.jpg" alt="제육정식" />
+                      </div>
+                      <div class="text-box">
+                        <p>도)오천원의행복제육정식</p>
+                        <div class="name"></div>
+                        <div class="price">
+                          <strong>5,000</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-3">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-3.jpg"
+                          alt="통인시장 기름떡볶이"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">
+                          <p>통인시장)매콤기름떡볶이</p>
+                        </div>
+                        <div class="price">
+                          <strong>3,600</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-4">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-4.jpg"
+                          alt="쇼콜라 생크림 케이크"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">
+                          <p>피오레)쇼콜라생크림케이크</p>
+                        </div>
+                        <div class="price">
+                          <strong>3,300</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-5">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-5.jpg"
+                          alt="CJ)햇반밥알크림빵"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">CJ)햇반밥알크림빵</div>
+                        <div class="price">
+                          <strong>3,400</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-6">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-6.jpg"
+                          alt="농심)푸팟퐁구리큰사발면"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <p>농심)푸팟퐁구리큰사발면</p>
+                        <div class="name"></div>
+                        <div class="price">
+                          <strong>2,000</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-7">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-7.jpg"
+                          alt="햄)통인시장추억의버거"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">
+                          <p>햄)통인시장추억의버거</p>
+                        </div>
+                        <div class="price">
+                          <strong>3,400</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-8">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-8.jpg"
+                          alt="더본)백종원김치찌개라면"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">
+                          <p>더본)백종원김치찌개라면</p>
+                        </div>
+                        <div class="price">
+                          <strong>2,200</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="swiper-slide swiper-slide-9">
+                    <a href="#" class="box-wrap">
+                      <div class="img-box">
+                        <img
+                          src="img/hot-issue-9.jpg"
+                          alt="더본)백종원김치찌개라면"
+                        />
+                      </div>
+                      <div class="text-box">
+                        <div class="name">
+                          <p>튀김)단팥붕어빵N</p>
+                        </div>
+                        <div class="price">
+                          <strong>900</strong><span>원</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="swiper-util-box h-[50px] relative">
+                <div class="swiper-pagination"></div>
+              </div>
+              <div class="swiper-button swiper-button-prev"></div>
+              <div class="swiper-button swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
 
-		<!-- 포켓cu배너-->
-		<section class="pocket-cu-banner-box mx-auto">
-			<div class="text-box">
-				<p>
-					차별화된 서비스와<br class="pc-none" />
-					풍성한 혜택이 가득 !
-				</p>
-				<p>포켓CU APP 사용해보세요:)</p>
-			</div>
-			<div class="img-box">
-				<img src="img/pocket-cu-banner-img.png" alt="포켓cu이미지" />
-			</div>
-			<a class="btn-box" href="#">포켓CU설치<span class="btn-img flex items-center"></span></a>
-		</section>
-		<!-- +1 배너 박스-->
-		<div class="plus-one-banner-box relative h-[57px] mt-[84px]">
-			<div class="plus-one__title-box">
-				<h2 class="plus-one__title">+1 증정상품</h2>
-				<div class="plus-one__link-more">
-					<a href="#">
-						<span class="pc-link-text">증정상품 모두보기</span>
-						<span class="pc-icon-arrow"></span>
-						<span class="mobile-link-text">모두보기</span>
-					</a>
-				</div>
-			</div>
-		</div>
-		<!-- +1 배너 스와이프-->
-		<section class="plus-one-banner-swiper">
-			<div class="con max-w-[1280px] mx-auto">
-				<div class="swiper">
-					<ul class="swiper-wrapper">
-						<li class="swiper-slide swiper-slide-1">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-1.png" alt="나뚜루녹차파인드" />
-								</div>
-								<div class="text-box">
-									<div class="name">나뚜루)녹차파인드</div>
-									<div class="price">
-										<strong>14,900</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-2">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-2.jpg" alt="나뚜루딸기파인드" />
-								</div>
-								<div class="text-box">
-									<div class="name">나뚜루)딸기파인드</div>
-									<div class="price">
-										<strong>14,900</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-3">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-3.jpg" alt="나뚜루초코파인드" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>나뚜루)초코파인드</p>
-									</div>
-									<div class="price">
-										<strong>3,600</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-4">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-4.jpg" alt="롯데빠삐코" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>롯데)빠삐코</p>
-									</div>
-									<div class="price">
-										<strong>1,800</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-5">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-5.jpg" alt="롯데죠스바" />
-								</div>
-								<div class="text-box">
-									<div class="name">롯데)죠스바</div>
-									<div class="price">
-										<strong>1,500</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-6">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-6.jpg" alt="롯데수박바" />
-								</div>
-								<div class="text-box">
-									<div class="name">롯데)수박바</div>
-									<div class="price">
-										<strong>1,500</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-7">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-7.jpg" alt="동원양반영양닭죽" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>동원)양반영양닭죽</p>
-									</div>
-									<div class="price">
-										<strong>4,500</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-8">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-8.jpg" alt="코카콜라스프라이트페트500ml" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>코카)스프라이트P500ml</p>
-									</div>
-									<div class="price">
-										<strong>2,000</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-9">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-9.jpg" alt="웅진오곡누룽지페트500ml" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>웅진)오곡누룽지P500ml</p>
-									</div>
-									<div class="price">
-										<strong>2,00</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-10">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-10.jpg" alt="광동파워헛개병" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>광동)파워헛개병</p>
-									</div>
-									<div class="price">
-										<strong>5,000</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-11">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-11.png" alt="풀무원액티비아업딸기" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>풀무원)액티비아업딸기</p>
-									</div>
-									<div class="price">
-										<strong>2,200</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-12">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-12.jpg" alt="46cm 초극세모칫솔" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>46cm)초극세모칫솔</p>
-									</div>
-									<div class="price">
-										<strong>3,500</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-13">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-13.jpg" alt="메디안치석케어치약" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>메디안)치석케어치약</p>
-									</div>
-									<div class="price">
-										<strong>4,500</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-14">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-14.jpg" alt="2080 칫솔" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>2080)칫솔</p>
-									</div>
-									<div class="price">
-										<strong>2,800</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-15">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-15.jpg" alt="2080 치약" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>2080)치약</p>
-									</div>
-									<div class="price">
-										<strong>4,000</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-16">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-16.jpg" alt="2080 센서티브미세모" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>2080)센서티브미세모</p>
-									</div>
-									<div class="price">
-										<strong>3,200</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-17">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-17.jpg" alt="엘라 퍼퓸삼푸" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>엘라)퍼퓸샴푸</p>
-									</div>
-									<div class="price">
-										<strong>14,900</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-18">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-18.jpg" alt="페리오 토탈7치약" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>페리오)토탈7치약</p>
-									</div>
-									<div class="price">
-										<strong>4,300</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-19">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-19.jpg" alt="페리오 이지클리닉칫솔" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>페리오)이지클리닉칫솔</p>
-									</div>
-									<div class="price">
-										<strong>2,200</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-						<li class="swiper-slide swiper-slide-20">
-							<a href="#" class="box-wrap">
-								<div class="img-box">
-									<img src="img/plus-20.jpg" alt="테크 세탁세제1.4L" />
-								</div>
-								<div class="text-box">
-									<div class="name">
-										<p>테크)세탁세제1.4L</p>
-									</div>
-									<div class="price">
-										<strong>12,900</strong><span>원</span>
-									</div>
-								</div>
-							</a>
-						</li>
-					</ul>
-				</div>
-				<div class="swiper-util-box h-[50px]">
-					<div class="swiper-pagination"></div>
-					<div class="swiper-button swiper-button-prev"></div>
-					<div class="swiper-button swiper-button-next"></div>
-				</div>
-			</div>
-		</section>
-		<section class="now-need-banner con mx-auto flex">
-			<div class="text-box">
-				<h2 class="title">지금 나에게 필요한건?</h2>
-				<p class="content">CU의 다양한 상품들을 소개합니다!</p>
-				<div class="serch-box">
-					<input type="text" placeholder="연세우유크림빵을 검색해보세요!" class="serch-text" /><a href="#" class="serch-btn"><img src="https://cu.bgfretail.com/images/main/new/ico_search.png" alt="검색아이콘" /></a>
-				</div>
-			</div>
-			<div class="img-box-wrap">
-				<a href="#" class="img-box img-box-1"><img src="img/ico_need_cate01.png" alt="간편식사" /><span>간편식사</span></a>
-				<a href="#" class="img-box img-box-2"><img src="img/ico_need_cate02.png" alt="즉석조리" /><span>즉석조리</span></a>
-				<a href="#" class="img-box img-box-3"><img src="img/ico_need_cate3.png" alt="생활용품" /><span>생활용품</span></a>
-				<a href="#" class="img-box img-box-4"><img src="img/ico_need_cate4.png" alt="식품" /><span>식품</span></a>
-				<a href="#" class="img-box img-box-5"><img src="img/ico_need_cate5.png" alt="음료" /><span>음료</span></a>
-				<a href="#" class="img-box img-box-6"><img src="img/ico_need_cate6.png" alt="아이스크림" /><span>아이스크림</span></a>
-				<a href="#" class="img-box img-box-7"><img src="img/ico_need_cate7.png" alt="스낵" /><span>스낵</span></a>
-			</div>
-		</section>
-		<!-- info 배너-->
-		<section class="info-banner mx-auto">
-			<div class="content-wrap w-full mx-[10px]">
-				<a href="#" class="startup-box">
-					<h2 class="title text-[28px]">창업안내</h2>
-					<p class="text-[18px]">점주님들의 성공을</p>
-					<p class="text-[18px]">최우선으로 생각하는</p>
-					<span class="arrow"></span>
-				</a>
-			</div>
-			<div class="content-wrap w-full mx-[10px]">
-				<a href="#" class="service-center-box">
-					<h2 class="title text-[28px]">고객센터</h2>
-					<p class="text-[18px]">상품문의, 창업상담 무엇을</p>
-					<p class="text-[18px]">도와드릴까요?</p>
-					<span class="arrow"></span>
-				</a>
-			</div>
-		</section>
-		<!--search-cu 배너-->
-		<section class="search-cu-banner mx-auto flex">
-			<div class="text-box">
-				<h2 class="title flex">
-					우리동네
-					<img class="mx-[15px] w-[95px] h-[48px]" src="img/ico_cu.png" alt="cu로고" />어디있지?
-				</h2>
-				<p class="content">근처에 있는 CU를 찾아보세요!</p>
-				<div class="search-box">
-					<input type="text" placeholder="점포명 또는 00동을 입력해보세요." class="serch-text" /><a href="#" class="search-btn"><img src="https://cu.bgfretail.com/images/main/new/ico_search.png" alt="검색아이콘" /></a>
-				</div>
-			</div>
-			<div class="search-cu-img">
-				<img src="img/img_cu_store.png" alt=" cu 매장" />
-			</div>
-		</section>
-		<section class="cu-story-banner con mx-auto">
-			<div class="content-wrap">
-				<h2 class="title-1">스토리</h2>
-				<div class="pc-wrap">
-					<div class="pocket-cu-content">
-						<a href="#" class="pocket-cu-img"><img src="img/pocket-img.png" alt="포켓cu" /></a>
-						<h3 class="title-2 flex">
-							CU를 더 가깝게<img src="img/story_logo.png" alt="포켓cu" />
-						</h3>
-						<p class="text">포켓CU APP 다운받아 편리하게 이용하세요</p>
-					</div>
-					<div class="bgf-live-content">
-						<a href="#" class="bgf-live-img"><img src="img/bgf-live.png" alt="bgf live" /></a>
-						<h3 class="title-2 flex">
-							BGF Live<img src="img/story_ico2.png" alt="가방아이콘" />
-						</h3>
-						<p class="text">BGF Live에서 <br />CU 최신 소식을 알아보세요</p>
-					</div>
-				</div>
-				<div class="instagram-content">
-					<div class="pc-wrap">
-						<a href="#" class="instagram-cu-img"><img src="img/instagram-banner.png" alt="인스타그램" /></a>
-						<h3 class="title-2 flex">
-							Instagram<img src="img/story_ico3.png" alt="인스타그램아이콘" />
-						</h3>
-					</div>
-					<div class="mobile-instagram-img">
-						<a href="#"><img src="img/instagram-banner.png" alt="" /></a>
-					</div>
-					<p class="text">
-						인기 캐릭터 망곰이도 반한 망그러진 곰 콜라보 꿀호떡버거🍯🐝
-					</p>
-				</div>
-			</div>
-		</section>
-		<!--스토어배너-->
-		<section class="cu-store-banner">
-			<div class="swiper">
-				<div class="swiper-wrapper">
-					<!-- Slides -->
-					<div class="swiper-slide-1 swiper-slide">
-						<div class="pc-none">
-							<img src="img/store-1.png" alt="cu 점포1" />
-						</div>
-						<div class="mobile-none">
-							<img src="img/store-1.png" alt="cu 점포1" />
-						</div>
-						<h2 class="content">
-							고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
-							CU입니다.
-						</h2>
-					</div>
-					<div class="swiper-slide-2 swiper-slide">
-						<div class="pc-none">
-							<img src="img/store-2.jpg" alt="cu 점포1" />
-						</div>
-						<div class="mobile-none">
-							<img src="img/store-2.jpg" alt="cu 점포2" />
-						</div>
-						<h2 class="content">
-							고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
-							CU입니다.
-						</h2>
-					</div>
-					<div class="swiper-slide-3 swiper-slide">
-						<div class="pc-none">
-							<img src="img/store-3.jpg" alt="cu 점포1" />
-						</div>
-						<div class="mobile-none">
-							<img src="img/store-3.jpg" alt="cu 점포3" />
-						</div>
-						<h2 class="content">
-							고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
-							CU입니다.
-						</h2>
-					</div>
-					<div class="swiper-slide-4 swiper-slide">
-						<div class="pc-none">
-							<img src="img/store-4.jpg" alt="cu 점포1" />
-						</div>
-						<div class="mobile-none">
-							<img src="img/store-4.jpg" alt="cu 점포4" />
-						</div>
-						<h2 class="content">
-							고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
-							CU입니다.
-						</h2>
-					</div>
-				</div>
+        <!-- 포켓cu배너-->
+        <section class="pocket-cu-banner-box mx-auto">
+          <div class="text-box">
+            <p>
+              차별화된 서비스와<br class="pc-none" />
+              풍성한 혜택이 가득 !
+            </p>
+            <p>포켓CU APP 사용해보세요:)</p>
+          </div>
+          <div class="img-box">
+            <img src="img/pocket-cu-banner-img.png" alt="포켓cu이미지" />
+          </div>
+          <a class="btn-box" href="#"
+            >포켓CU설치<span class="btn-img flex items-center"></span
+          ></a>
+        </section>
+        <!-- +1 배너 박스-->
+        <div class="plus-one-banner-box relative h-[57px] mt-[84px]">
+          <div class="plus-one__title-box">
+            <h2 class="plus-one__title">+1 증정상품</h2>
+            <div class="plus-one__link-more">
+              <a href="#">
+                <span class="pc-link-text">증정상품 모두보기</span>
+                <span class="pc-icon-arrow"></span>
+                <span class="mobile-link-text">모두보기</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- +1 배너 스와이프-->
+        <section class="plus-one-banner-swiper">
+          <div class="con max-w-[1280px] mx-auto">
+            <div class="swiper">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide swiper-slide-1">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-1.png" alt="나뚜루녹차파인드" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">나뚜루)녹차파인드</div>
+                      <div class="price">
+                        <strong>14,900</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-2">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-2.jpg" alt="나뚜루딸기파인드" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">나뚜루)딸기파인드</div>
+                      <div class="price">
+                        <strong>14,900</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-3">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-3.jpg" alt="나뚜루초코파인드" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>나뚜루)초코파인드</p>
+                      </div>
+                      <div class="price">
+                        <strong>3,600</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-4">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-4.jpg" alt="롯데빠삐코" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>롯데)빠삐코</p>
+                      </div>
+                      <div class="price">
+                        <strong>1,800</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-5">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-5.jpg" alt="롯데죠스바" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">롯데)죠스바</div>
+                      <div class="price">
+                        <strong>1,500</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-6">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-6.jpg" alt="롯데수박바" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">롯데)수박바</div>
+                      <div class="price">
+                        <strong>1,500</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-7">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-7.jpg" alt="동원양반영양닭죽" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>동원)양반영양닭죽</p>
+                      </div>
+                      <div class="price">
+                        <strong>4,500</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-8">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img
+                        src="img/plus-8.jpg"
+                        alt="코카콜라스프라이트페트500ml"
+                      />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>코카)스프라이트P500ml</p>
+                      </div>
+                      <div class="price">
+                        <strong>2,000</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-9">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-9.jpg" alt="웅진오곡누룽지페트500ml" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>웅진)오곡누룽지P500ml</p>
+                      </div>
+                      <div class="price">
+                        <strong>2,00</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-10">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-10.jpg" alt="광동파워헛개병" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>광동)파워헛개병</p>
+                      </div>
+                      <div class="price">
+                        <strong>5,000</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-11">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-11.png" alt="풀무원액티비아업딸기" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>풀무원)액티비아업딸기</p>
+                      </div>
+                      <div class="price">
+                        <strong>2,200</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-12">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-12.jpg" alt="46cm 초극세모칫솔" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>46cm)초극세모칫솔</p>
+                      </div>
+                      <div class="price">
+                        <strong>3,500</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-13">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-13.jpg" alt="메디안치석케어치약" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>메디안)치석케어치약</p>
+                      </div>
+                      <div class="price">
+                        <strong>4,500</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-14">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-14.jpg" alt="2080 칫솔" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>2080)칫솔</p>
+                      </div>
+                      <div class="price">
+                        <strong>2,800</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-15">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-15.jpg" alt="2080 치약" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>2080)치약</p>
+                      </div>
+                      <div class="price">
+                        <strong>4,000</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-16">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-16.jpg" alt="2080 센서티브미세모" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>2080)센서티브미세모</p>
+                      </div>
+                      <div class="price">
+                        <strong>3,200</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-17">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-17.jpg" alt="엘라 퍼퓸삼푸" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>엘라)퍼퓸샴푸</p>
+                      </div>
+                      <div class="price">
+                        <strong>14,900</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-18">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-18.jpg" alt="페리오 토탈7치약" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>페리오)토탈7치약</p>
+                      </div>
+                      <div class="price">
+                        <strong>4,300</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-19">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-19.jpg" alt="페리오 이지클리닉칫솔" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>페리오)이지클리닉칫솔</p>
+                      </div>
+                      <div class="price">
+                        <strong>2,200</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+                <li class="swiper-slide swiper-slide-20">
+                  <a href="#" class="box-wrap">
+                    <div class="img-box">
+                      <img src="img/plus-20.jpg" alt="테크 세탁세제1.4L" />
+                    </div>
+                    <div class="text-box">
+                      <div class="name">
+                        <p>테크)세탁세제1.4L</p>
+                      </div>
+                      <div class="price">
+                        <strong>12,900</strong><span>원</span>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-util-box h-[50px]">
+              <div class="swiper-pagination"></div>
+              <div class="swiper-button swiper-button-prev"></div>
+              <div class="swiper-button swiper-button-next"></div>
+            </div>
+          </div>
+        </section>
+        <section class="now-need-banner con mx-auto flex">
+          <div class="text-box">
+            <h2 class="title">지금 나에게 필요한건?</h2>
+            <p class="content">CU의 다양한 상품들을 소개합니다!</p>
+            <div class="serch-box">
+              <input
+                type="text"
+                placeholder="연세우유크림빵을 검색해보세요!"
+                class="serch-text"
+              /><a href="#" class="serch-btn"
+                ><img
+                  src="https://cu.bgfretail.com/images/main/new/ico_search.png"
+                  alt="검색아이콘"
+              /></a>
+            </div>
+          </div>
+          <div class="img-box-wrap">
+            <a href="#" class="img-box img-box-1"
+              ><img src="img/ico_need_cate01.png" alt="간편식사" /><span
+                >간편식사</span
+              ></a
+            >
+            <a href="#" class="img-box img-box-2"
+              ><img src="img/ico_need_cate02.png" alt="즉석조리" /><span
+                >즉석조리</span
+              ></a
+            >
+            <a href="#" class="img-box img-box-3"
+              ><img src="img/ico_need_cate3.png" alt="생활용품" /><span
+                >생활용품</span
+              ></a
+            >
+            <a href="#" class="img-box img-box-4"
+              ><img src="img/ico_need_cate4.png" alt="식품" /><span
+                >식품</span
+              ></a
+            >
+            <a href="#" class="img-box img-box-5"
+              ><img src="img/ico_need_cate5.png" alt="음료" /><span
+                >음료</span
+              ></a
+            >
+            <a href="#" class="img-box img-box-6"
+              ><img src="img/ico_need_cate6.png" alt="아이스크림" /><span
+                >아이스크림</span
+              ></a
+            >
+            <a href="#" class="img-box img-box-7"
+              ><img src="img/ico_need_cate7.png" alt="스낵" /><span
+                >스낵</span
+              ></a
+            >
+          </div>
+        </section>
+        <!-- info 배너-->
+        <section class="info-banner mx-auto">
+          <div class="content-wrap w-full mx-[10px]">
+            <a href="#" class="startup-box">
+              <h2 class="title text-[28px]">창업안내</h2>
+              <p class="text-[18px]">점주님들의 성공을</p>
+              <p class="text-[18px]">최우선으로 생각하는</p>
+              <span class="arrow"></span>
+            </a>
+          </div>
+          <div class="content-wrap w-full mx-[10px]">
+            <a href="#" class="service-center-box">
+              <h2 class="title text-[28px]">고객센터</h2>
+              <p class="text-[18px]">상품문의, 창업상담 무엇을</p>
+              <p class="text-[18px]">도와드릴까요?</p>
+              <span class="arrow"></span>
+            </a>
+          </div>
+        </section>
+        <!--search-cu 배너-->
+        <section class="search-cu-banner mx-auto flex">
+          <div class="text-box">
+            <h2 class="title flex">
+              우리동네
+              <img
+                class="mx-[15px] w-[95px] h-[48px]"
+                src="img/ico_cu.png"
+                alt="cu로고"
+              />어디있지?
+            </h2>
+            <p class="content">근처에 있는 CU를 찾아보세요!</p>
+            <div class="search-box">
+              <input
+                type="text"
+                placeholder="점포명 또는 00동을 입력해보세요."
+                class="serch-text"
+              /><a href="#" class="search-btn"
+                ><img
+                  src="https://cu.bgfretail.com/images/main/new/ico_search.png"
+                  alt="검색아이콘"
+              /></a>
+            </div>
+          </div>
+          <div class="search-cu-img">
+            <img src="img/img_cu_store.png" alt=" cu 매장" />
+          </div>
+        </section>
+        <section class="cu-story-banner con mx-auto">
+          <div class="content-wrap">
+            <h2 class="title-1">스토리</h2>
+            <div class="pc-wrap">
+              <div class="pocket-cu-content">
+                <a href="#" class="pocket-cu-img"
+                  ><img src="img/pocket-img.png" alt="포켓cu"
+                /></a>
+                <h3 class="title-2 flex">
+                  CU를 더 가깝게<img src="img/story_logo.png" alt="포켓cu" />
+                </h3>
+                <p class="text">포켓CU APP 다운받아 편리하게 이용하세요</p>
+              </div>
+              <div class="bgf-live-content">
+                <a href="#" class="bgf-live-img"
+                  ><img src="img/bgf-live.png" alt="bgf live"
+                /></a>
+                <h3 class="title-2 flex">
+                  BGF Live<img src="img/story_ico2.png" alt="가방아이콘" />
+                </h3>
+                <p class="text">BGF Live에서 <br />CU 최신 소식을 알아보세요</p>
+              </div>
+            </div>
+            <div class="instagram-content">
+              <div class="pc-wrap">
+                <a href="#" class="instagram-cu-img"
+                  ><img src="img/instagram-banner.png" alt="인스타그램"
+                /></a>
+                <h3 class="title-2 flex">
+                  Instagram<img
+                    src="img/story_ico3.png"
+                    alt="인스타그램아이콘"
+                  />
+                </h3>
+              </div>
+              <div class="mobile-instagram-img">
+                <a href="#"><img src="img/instagram-banner.png" alt="" /></a>
+              </div>
+              <p class="text">
+                인기 캐릭터 망곰이도 반한 망그러진 곰 콜라보 꿀호떡버거🍯🐝
+              </p>
+            </div>
+          </div>
+        </section>
+        <!--스토어배너-->
+        <section class="cu-store-banner">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide-1 swiper-slide">
+                <div class="pc-none">
+                  <img src="img/store-1.png" alt="cu 점포1" />
+                </div>
+                <div class="mobile-none">
+                  <img src="img/store-1.png" alt="cu 점포1" />
+                </div>
+                <h2 class="content">
+                  고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
+                  CU입니다.
+                </h2>
+              </div>
+              <div class="swiper-slide-2 swiper-slide">
+                <div class="pc-none">
+                  <img src="img/store-2.jpg" alt="cu 점포1" />
+                </div>
+                <div class="mobile-none">
+                  <img src="img/store-2.jpg" alt="cu 점포2" />
+                </div>
+                <h2 class="content">
+                  고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
+                  CU입니다.
+                </h2>
+              </div>
+              <div class="swiper-slide-3 swiper-slide">
+                <div class="pc-none">
+                  <img src="img/store-3.jpg" alt="cu 점포1" />
+                </div>
+                <div class="mobile-none">
+                  <img src="img/store-3.jpg" alt="cu 점포3" />
+                </div>
+                <h2 class="content">
+                  고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
+                  CU입니다.
+                </h2>
+              </div>
+              <div class="swiper-slide-4 swiper-slide">
+                <div class="pc-none">
+                  <img src="img/store-4.jpg" alt="cu 점포1" />
+                </div>
+                <div class="mobile-none">
+                  <img src="img/store-4.jpg" alt="cu 점포4" />
+                </div>
+                <h2 class="content">
+                  고객과 사회에 좋은친구,<br />BGF 리테일의 편의점 브랜드 <br />
+                  CU입니다.
+                </h2>
+              </div>
+            </div>
 
-				<div class="swiper-pagination"></div>
-			</div>
-		</section>
-	</div>
-</main>
-<footer class="bottom-bar mx-auto w-full">
-	<div class="pc-none">
-		<div class="logo-box">
-			<img src="img/footer_logo.png" alt="cu 로고" />
-		</div>
-	</div>
-	<section class="footer-wrap con mx-auto">
-		<div class="pc-none">
-			<div class="select-wrap">
-				<select class="select">
-					<option value="#" selected>관련사이트</option>
-					<option value="#">BGF</option>
-					<option value="#">BGF 리테일</option>
-					<option value="#">포켓 CU</option>
-					<option value="#">BGF 네트웍스</option>
-					<option value="#">BGF 휴먼넷</option>
-					<option value="#">BGF 로지스</option>
-					<option value="#">CU 포스트</option>
-				</select>
-			</div>
-		</div>
-		<div class="info-wrap mx-[10px]">
-			<div class="mobile-none">
-				<div class="logo-box">
-					<img src="img/footer_logo.png" alt="cu 로고" />
-				</div>
-			</div>
-			<div class="text-box py-[20px]">
-				<div class="address">
-					<h2 class="font-bold">
-						BGF리테일 서울시 강남구 테헤란로 405(삼성동)
-						<br />
-						COPYRIGHT © BGFretail ALL RIGHT RESERVED.
-					</h2>
-				</div>
-				<p class="footer-tel">TEL: 1577-8007</p>
-				<p class="footer-tel">대표자 민승배</p>
-				<p class="footer-tel">사업자 등록 번호 893-88-00792</p>
-			</div>
-			<div class="mobile-none">
-				<div class="footer-sns">
-					<ul class="footer-sns-box flex">
-						<li class="sns-btn">
-							<a href="#"><img src="img/footer_facebook.png" alt="페이스북" /></a>
-						</li>
-						<li class="sns-btn">
-							<a href="#"><img src="img/footer_twitter.png" alt="트위터" /></a>
-						</li>
-						<li class="sns-btn">
-							<a href="#"><img src="img/footer_blog.png" alt="블로그" /></a>
-						</li>
-						<li class="sns-btn">
-							<a href="#"><img src="img/footer_instagram.png" alt="인스타그램" /></a>
-						</li>
-						<li class="sns-btn">
-							<a href="#"><img src="img/footer_youtube.png" alt="유튜브" /></a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="quick-menu-wrap">
-			<div class="mobile-none">
-				<h2 class="title">Quick-Menu</h2>
-			</div>
-			<div class="content-wrap flex">
-				<ul class="content">
-					<li><a href="#">입점상담</a></li>
-					<li><a href="#">제휴/광고문의</a></li>
-					<li><a href="#">매장찾기</a></li>
-					<li><a href="#">발주 및 배송데이터</a></li>
-					<li><a href="#">전자세금계산서</a></li>
-				</ul>
-				<ul class="content">
-					<li><a href="#">점주인증</a></li>
-					<li><a href="#">임직원인증</a></li>
-					<li><a href="#" class="text-black">개인정보처리방침</a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="mobile-none">
-			<div class="family-site-wrap">
-				<h2 class="title">Family-Site</h2>
-				<div class="content-wrap flex">
-					<ul class="content">
-						<li><a href="#">BGF</a></li>
-						<li><a href="#">BGF리테일</a></li>
-						<li><a href="#">포켓CU</a></li>
-						<li><a href="#">BGF네트웍스</a></li>
-						<li><a href="#">전자세금계산서</a></li>
-					</ul>
-					<ul class="content">
-						<li><a href="#">BGF휴먼넷</a></li>
-						<li><a href="#">BGF로지스</a></li>
-						<li><a href="#">CU포스트</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
-</footer>
-</body>
-
+            <div class="swiper-pagination"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="bottom-bar mx-auto w-full">
+      <div class="pc-none">
+        <div class="logo-box">
+          <img src="img/footer_logo.png" alt="cu 로고" />
+        </div>
+      </div>
+      <section class="footer-wrap con mx-auto">
+        <div class="pc-none">
+          <div class="select-wrap">
+            <select class="select">
+              <option value="#" selected>관련사이트</option>
+              <option value="#">BGF</option>
+              <option value="#">BGF 리테일</option>
+              <option value="#">포켓 CU</option>
+              <option value="#">BGF 네트웍스</option>
+              <option value="#">BGF 휴먼넷</option>
+              <option value="#">BGF 로지스</option>
+              <option value="#">CU 포스트</option>
+            </select>
+          </div>
+        </div>
+        <div class="info-wrap mx-[10px]">
+          <div class="mobile-none">
+            <div class="logo-box">
+              <img src="img/footer_logo.png" alt="cu 로고" />
+            </div>
+          </div>
+          <div class="text-box py-[20px]">
+            <div class="address">
+              <h2 class="font-bold">
+                BGF리테일 서울시 강남구 테헤란로 405(삼성동)
+                <br />
+                COPYRIGHT © BGFretail ALL RIGHT RESERVED.
+              </h2>
+            </div>
+            <p class="footer-tel">TEL: 1577-8007</p>
+            <p class="footer-tel">대표자 민승배</p>
+            <p class="footer-tel">사업자 등록 번호 893-88-00792</p>
+          </div>
+          <div class="mobile-none">
+            <div class="footer-sns">
+              <ul class="footer-sns-box flex">
+                <li class="sns-btn">
+                  <a href="#"
+                    ><img src="img/footer_facebook.png" alt="페이스북"
+                  /></a>
+                </li>
+                <li class="sns-btn">
+                  <a href="#"
+                    ><img src="img/footer_twitter.png" alt="트위터"
+                  /></a>
+                </li>
+                <li class="sns-btn">
+                  <a href="#"><img src="img/footer_blog.png" alt="블로그" /></a>
+                </li>
+                <li class="sns-btn">
+                  <a href="#"
+                    ><img src="img/footer_instagram.png" alt="인스타그램"
+                  /></a>
+                </li>
+                <li class="sns-btn">
+                  <a href="#"
+                    ><img src="img/footer_youtube.png" alt="유튜브"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="quick-menu-wrap">
+          <div class="mobile-none">
+            <h2 class="title">Quick-Menu</h2>
+          </div>
+          <div class="content-wrap flex">
+            <ul class="content">
+              <li><a href="#">입점상담</a></li>
+              <li><a href="#">제휴/광고문의</a></li>
+              <li><a href="#">매장찾기</a></li>
+              <li><a href="#">발주 및 배송데이터</a></li>
+              <li><a href="#">전자세금계산서</a></li>
+            </ul>
+            <ul class="content">
+              <li><a href="#">점주인증</a></li>
+              <li><a href="#">임직원인증</a></li>
+              <li><a href="#" class="text-black">개인정보처리방침</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mobile-none">
+          <div class="family-site-wrap">
+            <h2 class="title">Family-Site</h2>
+            <div class="content-wrap flex">
+              <ul class="content">
+                <li><a href="#">BGF</a></li>
+                <li><a href="#">BGF리테일</a></li>
+                <li><a href="#">포켓CU</a></li>
+                <li><a href="#">BGF네트웍스</a></li>
+                <li><a href="#">전자세금계산서</a></li>
+              </ul>
+              <ul class="content">
+                <li><a href="#">BGF휴먼넷</a></li>
+                <li><a href="#">BGF로지스</a></li>
+                <li><a href="#">CU포스트</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
